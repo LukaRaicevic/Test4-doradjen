@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10%;
+}
+
+.keys {
+    margin-right: 5%;
+}
+
+.btn {
+    width: 60px;
+    height: 50px;
+    margin: 2px;
+}
+
+p {
+    margin-top: 2px;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.sound-name {
+    width: 150px;
+    height: 40px;
+    background-color: rgb(204, 204, 204);
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.options button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.power-btn {
+    width: 30px;
+    height: 20px;
+    background-color: green;
+}

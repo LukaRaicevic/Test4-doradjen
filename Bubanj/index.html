@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Drum</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="keys">
+                <div>
+                    <button class="btn btnQ">Q</button>
+                    <button class="btn btnW">W</button>
+                    <button class="btn btnE">E</button>
+                </div>
+
+                <div>
+                    <button class="btn btnA">A</button>
+                    <button class="btn btnS">S</button>
+                    <button class="btn btnD">D</button>
+                </div>
+
+                <div>
+                    <button class="btn btnZ">Z</button>
+                    <button class="btn btnX">X</button>
+                    <button class="btn btnC">C</button>
+                </div>
+            </div>
+
+            <div class="options">
+                <div class="power-div">
+                    <p class="pwr-p">Power (Prvi put kliknuti 2 puta na dugme)</p>
+                    <button class="power-btn" id="green"></button>
+                </div>
+
+                <div class="sound-name"></div>
+
+                <div class="slider-div">
+                    <input type="range" min="1" max="100" value="50" class="slider">
+                </div>
+
+                <div>
+                    <p>Bank</p>
+                    <button class="bank-btn">Mode 1</button>
+                </div>
+            </div>
+            <audio class="audio"></audio>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
