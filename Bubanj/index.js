@@ -144,7 +144,7 @@
     }
 
     pwrBtn.addEventListener("click", function() {
-        if(this.style.backgroundColor === "green") {
+        if(this.id === "green") {
             this.style.backgroundColor = "red";
             this.id = "red";
         } else {
@@ -162,6 +162,22 @@
         }
     });
 
+    function addLisOnBtn(elem, key) {
+        elem.addEventListener("click", function() {
+            playSound(key, checkMode());
+        });
+    }
+
+    addLisOnBtn(btnQ, 'Q');
+    addLisOnBtn(btnW, 'W');
+    addLisOnBtn(btnE, 'E');
+    addLisOnBtn(btnA, 'A');
+    addLisOnBtn(btnS, 'S');
+    addLisOnBtn(btnD, 'D');
+    addLisOnBtn(btnZ, 'Z');
+    addLisOnBtn(btnX, 'X');
+    addLisOnBtn(btnC, 'C');
+    /*
     btnQ.addEventListener("click", function() {
         playSound('Q', checkMode());
     });
@@ -189,8 +205,21 @@
     btnC.addEventListener("click", function() {
         playSound('C', checkMode());
     });
+    */
 
-
+    function whichKey(key) {
+        let arr = checkMode();
+        for(let i = 0; i < arr.length; i++) {
+            if(key === arr[i].keyCode) {
+                playSound(arr[i].keyTrigger, arr);
+            }
+        }
+    }
+    
+    document.addEventListener("keypress", function() {
+        whichKey(event.keyCode);
+    });
+    /*
     document.addEventListener("keypress", function() {
         if(event.keyCode === checkMode()[0].keyCode) { 
             playSound('Q', checkMode());
@@ -212,5 +241,5 @@
             playSound('C', checkMode());
         }
     });
-    
+    */
 })()
